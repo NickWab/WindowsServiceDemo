@@ -1,0 +1,106 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0/win-x64",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {},
+    ".NETCoreApp,Version=v7.0/win-x64": {
+      "HealRebootService/1.0.0": {
+        "dependencies": {
+          "Serilog": "4.0.0-dev-02122",
+          "Serilog.Sinks.File": "5.0.1-dev-00972",
+          "System.ServiceProcess.ServiceController": "9.0.0-preview.2.24128.5"
+        },
+        "runtime": {
+          "HealRebootService.dll": {}
+        }
+      },
+      "Serilog/4.0.0-dev-02122": {
+        "runtime": {
+          "lib/net6.0/Serilog.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
+          }
+        }
+      },
+      "Serilog.Sinks.File/5.0.1-dev-00972": {
+        "dependencies": {
+          "Serilog": "4.0.0-dev-02122"
+        },
+        "runtime": {
+          "lib/net6.0/Serilog.Sinks.File.dll": {
+            "assemblyVersion": "5.0.1.0",
+            "fileVersion": "5.0.1.0"
+          }
+        }
+      },
+      "System.Diagnostics.EventLog/9.0.0-preview.2.24128.5": {
+        "dependencies": {
+          "System.Security.Principal.Windows": "5.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Diagnostics.EventLog.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.12805"
+          }
+        }
+      },
+      "System.Security.Principal.Windows/5.0.0": {},
+      "System.ServiceProcess.ServiceController/9.0.0-preview.2.24128.5": {
+        "dependencies": {
+          "System.Diagnostics.EventLog": "9.0.0-preview.2.24128.5"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.ServiceProcess.ServiceController.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.12805"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "HealRebootService/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Serilog/4.0.0-dev-02122": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-u4aRwoIMSn9MREOkNJyL8BNhXVf/vPPP2Dp3YyyNVZg7Z31ITCHyKnmMoUH5jMgqYxR6JunPTV/Mx9hQDBMCLA==",
+      "path": "serilog/4.0.0-dev-02122",
+      "hashPath": "serilog.4.0.0-dev-02122.nupkg.sha512"
+    },
+    "Serilog.Sinks.File/5.0.1-dev-00972": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-fIK2UIewc1meCDpL8pOJLy0QRe1IzqJ3cnSXjz7GpPVVCr715nFloa49QKeK4dFPDgQk9xU3zi3ioIVefSi0+Q==",
+      "path": "serilog.sinks.file/5.0.1-dev-00972",
+      "hashPath": "serilog.sinks.file.5.0.1-dev-00972.nupkg.sha512"
+    },
+    "System.Diagnostics.EventLog/9.0.0-preview.2.24128.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Vx+NQpHiEFS6vrIHzkqUaLtvfhFV1TDRkmtO+/yeb/NOXOMHRIIt0JEdOEbUUMEqQ8EaFcBRKTz/DRFvP6o/zA==",
+      "path": "system.diagnostics.eventlog/9.0.0-preview.2.24128.5",
+      "hashPath": "system.diagnostics.eventlog.9.0.0-preview.2.24128.5.nupkg.sha512"
+    },
+    "System.Security.Principal.Windows/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-t0MGLukB5WAVU9bO3MGzvlGnyJPgUlcwerXn1kzBRjwLKixT96XV0Uza41W49gVd8zEMFu9vQEFlv0IOrytICA==",
+      "path": "system.security.principal.windows/5.0.0",
+      "hashPath": "system.security.principal.windows.5.0.0.nupkg.sha512"
+    },
+    "System.ServiceProcess.ServiceController/9.0.0-preview.2.24128.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UZznDhxtOEbkm8PS06f++NjZZZUuuQ748TDXjSjVddn4Apk2266jUaaXehhMwBU+4hD2mc6qUCD8bPHeCsgoPg==",
+      "path": "system.serviceprocess.servicecontroller/9.0.0-preview.2.24128.5",
+      "hashPath": "system.serviceprocess.servicecontroller.9.0.0-preview.2.24128.5.nupkg.sha512"
+    }
+  }
+}
