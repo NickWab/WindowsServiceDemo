@@ -9,3 +9,4 @@ Default Windows Service with a monitor that checks Health of the Service. if ser
 
 * To verify - WIN + R , type services.msc , locate the NameForService
 * Modify Service name in DemoService and HealRebootService for personal use
+  - The Service name is stored in appsettings.json for more convenient use
