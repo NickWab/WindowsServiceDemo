@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\niko3\\Desktop\\Services\\DemoService\\DemoService\\DemoService\\DemoService.csproj": {}
+    "C:\\Users\\nikolaym\\Desktop\\ServiceDemo\\WindowsServiceDemo\\DemoService\\DemoService\\DemoService\\DemoService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\niko3\\Desktop\\Services\\DemoService\\DemoService\\DemoService\\DemoService.csproj": {
+    "C:\\Users\\nikolaym\\Desktop\\ServiceDemo\\WindowsServiceDemo\\DemoService\\DemoService\\DemoService\\DemoService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\niko3\\Desktop\\Services\\DemoService\\DemoService\\DemoService\\DemoService.csproj",
+        "projectUniqueName": "C:\\Users\\nikolaym\\Desktop\\ServiceDemo\\WindowsServiceDemo\\DemoService\\DemoService\\DemoService\\DemoService.csproj",
         "projectName": "DemoService",
-        "projectPath": "C:\\Users\\niko3\\Desktop\\Services\\DemoService\\DemoService\\DemoService\\DemoService.csproj",
-        "packagesPath": "C:\\Users\\niko3\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\niko3\\Desktop\\Services\\DemoService\\DemoService\\DemoService\\obj\\",
+        "projectPath": "C:\\Users\\nikolaym\\Desktop\\ServiceDemo\\WindowsServiceDemo\\DemoService\\DemoService\\DemoService\\DemoService.csproj",
+        "packagesPath": "C:\\Users\\galg\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\nikolaym\\Desktop\\ServiceDemo\\WindowsServiceDemo\\DemoService\\DemoService\\DemoService\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\niko3\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\galg\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -69,7 +74,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     }

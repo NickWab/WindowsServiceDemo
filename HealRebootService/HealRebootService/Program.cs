@@ -2,10 +2,19 @@
 using System.Diagnostics;
 using System.ServiceProcess;
 using System.Threading;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Configuration.Json;
 using Serilog;
 
 class Program
 {
+    static  IConfiguration   _configuration;
+
+    public Program(IConfiguration configuration)
+    {
+        _configuration = configuration;
+    }
+
     static void Main(string[] args)
     {
         // Configure Serilog for logging
@@ -13,10 +22,12 @@ class Program
             .WriteTo.File("log.txt", rollingInterval: RollingInterval.Day)
             .CreateLogger();
 
-        string serviceName = "DemoServiceApp";
+        var builder = new ConfigurationBuilder().AddJsonFile("appsettings.json",optional:true,reloadOnChange:true);
+        _configuration = builder.Build();
+        
+        string serviceName = _configuration["ServiceName"];
 
-        while (true)
-        {
+
             try
             {
                 if (IsServiceRunning(serviceName))
@@ -37,20 +48,21 @@ class Program
                 Log.Error($"Error: {ex.Message}");
                 Thread.Sleep(60000); //  1 minute for retry.
             }
-        }
     }
 
     static bool IsServiceRunning(string serviceName)
     {
         Process process = new Process();
         process.StartInfo.FileName = "sc.exe";
-        process.StartInfo.Arguments = $"query {serviceName} | findstr RUNNING";
+        process.StartInfo.Arguments = $"query {serviceName}";
         process.StartInfo.UseShellExecute = false;
         process.StartInfo.RedirectStandardOutput = true;
         process.Start();
         string output = process.StandardOutput.ReadToEnd();
         process.WaitForExit();
-        return output.Contains("RUNNING");
+    
+        // Check if the service state is "RUNNING" in the output
+        return output.Contains("STATE") && output.Contains("RUNNING");
     }
 
     static void StartService(string serviceName)

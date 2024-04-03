@@ -1,0 +1,11 @@
+C:\Users\nikolaym\Desktop\ServiceDemo\WindowsServiceDemo\HealRebootService\HealRebootService\bin\Release\net7.0\publish\HealRebootService.exe
+C:\Users\nikolaym\Desktop\ServiceDemo\WindowsServiceDemo\HealRebootService\HealRebootService\bin\Release\net7.0\publish\HealRebootService.dll
+C:\Users\nikolaym\Desktop\ServiceDemo\WindowsServiceDemo\HealRebootService\HealRebootService\bin\Release\net7.0\publish\HealRebootService.deps.json
+C:\Users\nikolaym\Desktop\ServiceDemo\WindowsServiceDemo\HealRebootService\HealRebootService\bin\Release\net7.0\publish\HealRebootService.runtimeconfig.json
+C:\Users\nikolaym\Desktop\ServiceDemo\WindowsServiceDemo\HealRebootService\HealRebootService\bin\Release\net7.0\publish\HealRebootService.pdb
+C:\Users\nikolaym\Desktop\ServiceDemo\WindowsServiceDemo\HealRebootService\HealRebootService\bin\Release\net7.0\publish\Serilog.dll
+C:\Users\nikolaym\Desktop\ServiceDemo\WindowsServiceDemo\HealRebootService\HealRebootService\bin\Release\net7.0\publish\Serilog.Sinks.File.dll
+C:\Users\nikolaym\Desktop\ServiceDemo\WindowsServiceDemo\HealRebootService\HealRebootService\bin\Release\net7.0\publish\System.CodeDom.dll
+C:\Users\nikolaym\Desktop\ServiceDemo\WindowsServiceDemo\HealRebootService\HealRebootService\bin\Release\net7.0\publish\System.Diagnostics.EventLog.dll
+C:\Users\nikolaym\Desktop\ServiceDemo\WindowsServiceDemo\HealRebootService\HealRebootService\bin\Release\net7.0\publish\System.Management.dll
+C:\Users\nikolaym\Desktop\ServiceDemo\WindowsServiceDemo\HealRebootService\HealRebootService\bin\Release\net7.0\publish\System.ServiceProcess.ServiceController.dll

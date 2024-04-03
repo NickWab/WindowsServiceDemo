@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = DemoService
-build_property.ProjectDir = C:\Users\niko3\Desktop\Services\DemoService\DemoService\DemoService\
+build_property.ProjectDir = C:\Users\nikolaym\Desktop\ServiceDemo\WindowsServiceDemo\DemoService\DemoService\DemoService\

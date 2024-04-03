@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\niko3\\Desktop\\Services\\HealRebootService\\HealRebootService\\HealRebootService.csproj": {}
+    "C:\\Users\\nikolaym\\Desktop\\ServiceDemo\\WindowsServiceDemo\\HealRebootService\\HealRebootService\\HealRebootService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\niko3\\Desktop\\Services\\HealRebootService\\HealRebootService\\HealRebootService.csproj": {
+    "C:\\Users\\nikolaym\\Desktop\\ServiceDemo\\WindowsServiceDemo\\HealRebootService\\HealRebootService\\HealRebootService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\niko3\\Desktop\\Services\\HealRebootService\\HealRebootService\\HealRebootService.csproj",
+        "projectUniqueName": "C:\\Users\\nikolaym\\Desktop\\ServiceDemo\\WindowsServiceDemo\\HealRebootService\\HealRebootService\\HealRebootService.csproj",
         "projectName": "HealRebootService",
-        "projectPath": "C:\\Users\\niko3\\Desktop\\Services\\HealRebootService\\HealRebootService\\HealRebootService.csproj",
-        "packagesPath": "C:\\Users\\niko3\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\niko3\\Desktop\\Services\\HealRebootService\\HealRebootService\\obj\\",
+        "projectPath": "C:\\Users\\nikolaym\\Desktop\\ServiceDemo\\WindowsServiceDemo\\HealRebootService\\HealRebootService\\HealRebootService.csproj",
+        "packagesPath": "C:\\Users\\galg\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\nikolaym\\Desktop\\ServiceDemo\\WindowsServiceDemo\\HealRebootService\\HealRebootService\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\niko3\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\galg\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -40,6 +45,14 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "Serilog": {
               "target": "Package",
               "version": "[4.0.0-dev-02122, )"
@@ -68,30 +81,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[7.0.17, 7.0.17]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[7.0.17, 7.0.17]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[7.0.17, 7.0.17]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[7.0.17, 7.0.17]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     }
