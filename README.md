@@ -1,4 +1,5 @@
-Default Windows Service with a monitor that checks Health of the Service. if service is down, will start it.
+Default Windows Service with a monitor that checks Health of the Service. Auto Restarts Service if windows service is down.
+
 * Need to install - dotnet add package Microsoft.Extensions.Hosting.WindowsServices
 * Need to run with highest privileges (both IDE and cmd)
 * Tested on .net core 7
