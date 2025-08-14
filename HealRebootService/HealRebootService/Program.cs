@@ -1,20 +1,13 @@
-﻿using System;
-using System.Diagnostics;
+using System;
 using System.ServiceProcess;
 using System.Threading;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Configuration.Json;
 using Serilog;
+
+// Note: This project requires the nuget package System.ServiceProcess.ServiceController
 
 class Program
 {
-    static  IConfiguration   _configuration;
-
-    public Program(IConfiguration configuration)
-    {
-        _configuration = configuration;
-    }
-
     static void Main(string[] args)
     {
         // Configure Serilog for logging
@@ -22,55 +15,37 @@ class Program
             .WriteTo.File("log.txt", rollingInterval: RollingInterval.Day)
             .CreateLogger();
 
-        var builder = new ConfigurationBuilder().AddJsonFile("appsettings.json",optional:true,reloadOnChange:true);
-        _configuration = builder.Build();
-        
-        string serviceName = _configuration["ServiceName"];
+        var configuration = new ConfigurationBuilder()
+            .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+            .Build();
 
+        string serviceName = configuration["ServiceName"];
 
+        while (true)
+        {
             try
             {
-                if (IsServiceRunning(serviceName))
+                using (var sc = new ServiceController(serviceName))
                 {
-                    Log.Information("Service is running.");
+                    if (sc.Status == ServiceControllerStatus.Running)
+                    {
+                        Log.Information("Service '{ServiceName}' is running.", serviceName);
+                    }
+                    else
+                    {
+                        Log.Warning("Service '{ServiceName}' is not running. Current status: {Status}. Attempting to start...", serviceName, sc.Status);
+                        sc.Start();
+                        sc.WaitForStatus(ServiceControllerStatus.Running, TimeSpan.FromSeconds(30));
+                        Log.Information("Service '{ServiceName}' started successfully.", serviceName);
+                    }
                 }
-                else
-                {
-                    Log.Information("Service is not running. Starting...");
-                    StartService(serviceName);
-                }
-
-               
-                Thread.Sleep(60000); // 1 minute for retry.
             }
             catch (Exception ex)
             {
-                Log.Error($"Error: {ex.Message}");
-                Thread.Sleep(60000); //  1 minute for retry.
+                Log.Error(ex, "An error occurred while monitoring service '{ServiceName}'.", serviceName);
             }
-    }
 
-    static bool IsServiceRunning(string serviceName)
-    {
-        Process process = new Process();
-        process.StartInfo.FileName = "sc.exe";
-        process.StartInfo.Arguments = $"query {serviceName}";
-        process.StartInfo.UseShellExecute = false;
-        process.StartInfo.RedirectStandardOutput = true;
-        process.Start();
-        string output = process.StandardOutput.ReadToEnd();
-        process.WaitForExit();
-    
-        // Check if the service state is "RUNNING" in the output
-        return output.Contains("STATE") && output.Contains("RUNNING");
-    }
-
-    static void StartService(string serviceName)
-    {
-        Process process = new Process();
-        process.StartInfo.FileName = "sc.exe";
-        process.StartInfo.Arguments = $"start {serviceName}";
-        process.Start();
-        process.WaitForExit();
+            Thread.Sleep(60000); // 1 minute for retry.
+        }
     }
 }
